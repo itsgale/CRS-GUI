@@ -41,8 +41,6 @@ public class accountDetails extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        ps = new javax.swing.JLabel();
         fn = new javax.swing.JLabel();
         ln = new javax.swing.JLabel();
         un = new javax.swing.JLabel();
@@ -111,15 +109,6 @@ public class accountDetails extends javax.swing.JFrame {
         jLabel10.setText("Account type:");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Password: ");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 100, -1, -1));
-
-        ps.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
-        ps.setBorder(new javax.swing.border.MatteBorder(null));
-        jPanel1.add(ps, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 100, 230, 30));
-
         fn.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
         fn.setBorder(new javax.swing.border.MatteBorder(null));
         jPanel1.add(fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 230, 30));
@@ -147,7 +136,7 @@ public class accountDetails extends javax.swing.JFrame {
                 jLabel3MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 80, 20));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 80, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -244,12 +233,10 @@ public class accountDetails extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel ln;
-    private javax.swing.JLabel ps;
     private javax.swing.JLabel un;
     // End of variables declaration//GEN-END:variables
 }

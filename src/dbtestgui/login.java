@@ -151,15 +151,15 @@ public class login extends javax.swing.JFrame {
         
         if(loginAcc(username.getText(), password.getText())){
             if(!status.equals("Active")){
-            JOptionPane.showMessageDialog(null, "In-Active paman ni, Contact admin!");                            
+            JOptionPane.showMessageDialog(null, "In-Active Account,\n Pls Contact admin!");                            
         }else{
                 if(type.equals("Administrator")){
-                    JOptionPane.showMessageDialog(null,"Login Successfull, bayota ka!");
+                    JOptionPane.showMessageDialog(null,"Login Successfull!");
                     admindashboard ads = new admindashboard();
                     ads.setVisible(true);
                     this.dispose();
                 }else if(type.equals("User")){
-                    JOptionPane.showMessageDialog(null,"Login Successfull, bayota ka!");
+                    JOptionPane.showMessageDialog(null,"Login Successfull!");
                     userDashboard ud = new userDashboard();
                     ud.setVisible(true);
                     this.dispose();
@@ -168,7 +168,18 @@ public class login extends javax.swing.JFrame {
                 }
             }           
         }else{
-            JOptionPane.showMessageDialog(null,"Login failed, amawa ka!");
+               try {
+                ResultSet resultSet = new dbConnector().getData("SELECT * FROM tbl_user WHERE u_username = '" + username.getText()+ "'");
+                if (resultSet.next()) {
+                    // Username exists, but password is incorrect
+                    JOptionPane.showMessageDialog(null, "Password is incorrect.");
+                } else {
+                    // Username does not exist
+                    JOptionPane.showMessageDialog(null, "Account does not exist.");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }//GEN-LAST:event_loginActionPerformed
 

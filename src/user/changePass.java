@@ -178,7 +178,7 @@ public class changePass extends javax.swing.JFrame {
            lg.setVisible(true);
            this.dispose();
        }else{
-           acc_id.setText(""+sess.getUid());
+           acc_id.setText("ID: "+sess.getUid());
        }
     }//GEN-LAST:event_formWindowActivated
 
