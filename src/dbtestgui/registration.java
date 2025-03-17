@@ -77,10 +77,13 @@ public class registration extends javax.swing.JFrame {
         RegisterButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         ut = new javax.swing.JComboBox<>();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Main.setBackground(new java.awt.Color(135, 91, 91));
+        Main.setBackground(new java.awt.Color(255, 255, 255));
+        Main.setPreferredSize(new java.awt.Dimension(780, 520));
         Main.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
@@ -128,7 +131,7 @@ public class registration extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Password: ");
-        Main.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, -1, -1));
+        Main.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, -1, -1));
 
         pass.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         pass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -137,17 +140,17 @@ public class registration extends javax.swing.JFrame {
                 passActionPerformed(evt);
             }
         });
-        Main.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 210, 30));
+        Main.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 210, 30));
 
         jLabel9.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Account type:");
+        jLabel9.setText("Account Type:");
         Main.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Email:");
-        Main.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, -1, -1));
+        Main.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, -1, -1));
 
         email.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         email.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -156,10 +159,10 @@ public class registration extends javax.swing.JFrame {
                 emailActionPerformed(evt);
             }
         });
-        Main.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 210, 30));
+        Main.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 210, 30));
 
         cancel.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
-        cancel.setText("CANCEL");
+        cancel.setText("Cancel");
         cancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelActionPerformed(evt);
@@ -168,7 +171,7 @@ public class registration extends javax.swing.JFrame {
         Main.add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 90, 20));
 
         RegisterButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
-        RegisterButton.setText("REGISTER");
+        RegisterButton.setText("Register");
         RegisterButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegisterButtonActionPerformed(evt);
@@ -177,11 +180,12 @@ public class registration extends javax.swing.JFrame {
         Main.add(RegisterButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, 90, 20));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
-        jLabel1.setText("Register your account");
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Register Your Account");
         jLabel1.setToolTipText("");
-        Main.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 250, 50));
+        Main.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 550, 50));
 
-        ut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Administrator" }));
+        ut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Admin" }));
         ut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 utActionPerformed(evt);
@@ -189,16 +193,24 @@ public class registration extends javax.swing.JFrame {
         });
         Main.add(ut, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, 210, 30));
 
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-codechef-100.png"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 110, 150));
+
+        Main.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 520));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Main, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+            .addComponent(Main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(Main, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -233,7 +245,7 @@ if (fn.getText().isEmpty() ||
     pass.getText().isEmpty() || 
     email.getText().isEmpty()) {
   
-    JOptionPane.showMessageDialog(null, "Error! Complete the Information!"); 
+    JOptionPane.showMessageDialog(null, "Error! Complete the Information"); 
     return;         
 } else if (pass.getText().length() < 8) {
     JOptionPane.showMessageDialog(null, "Password should contain at least 8 characters");
@@ -327,9 +339,11 @@ if (fn.getText().isEmpty() ||
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField ln;
     private javax.swing.JPasswordField pass;
     private javax.swing.JTextField username;

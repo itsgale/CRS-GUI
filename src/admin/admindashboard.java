@@ -35,10 +35,10 @@ public class admindashboard extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         acc_id = new javax.swing.JLabel();
         acc_name = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -50,36 +50,34 @@ public class admindashboard extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(135, 91, 91));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setMinimumSize(new java.awt.Dimension(780, 520));
+        jPanel1.setPreferredSize(new java.awt.Dimension(780, 520));
         jPanel1.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(109, 71, 52));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel2.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
-        jLabel1.setText("ADMIN DASHBOARD");
+        jLabel1.setText("Admin Dashboard");
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(10, 10, 232, 32);
+        jLabel1.setBounds(10, 10, 196, 32);
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        jLabel2.setText("logout");
+        jLabel2.setText("Logout");
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel2MouseClicked(evt);
             }
         });
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(840, 10, 60, 40);
+        jLabel2.setBounds(700, 10, 60, 40);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 910, 60);
+        jPanel2.setBounds(0, 0, 780, 60);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/005-man-in-suit-and-tie.png"))); // NOI18N
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(10, 320, 70, 90);
-
-        jPanel3.setBackground(new java.awt.Color(109, 71, 52));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -88,13 +86,16 @@ public class admindashboard extends javax.swing.JFrame {
         jPanel3.add(acc_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 140, 30));
 
         acc_name.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        acc_name.setText("NAME");
+        acc_name.setText("Name");
         jPanel3.add(acc_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 140, 40));
 
-        jPanel1.add(jPanel3);
-        jPanel3.setBounds(0, 320, 910, 90);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/005-man-in-suit-and-tie.png"))); // NOI18N
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 90));
 
-        jPanel4.setBackground(new java.awt.Color(112, 73, 73));
+        jPanel1.add(jPanel3);
+        jPanel3.setBounds(0, 430, 780, 90);
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -107,7 +108,7 @@ public class admindashboard extends javax.swing.JFrame {
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 70, 70));
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
-        jLabel3.setText("USERS");
+        jLabel3.setText("Users");
         jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 50, -1));
 
         jPanel1.add(jPanel4);
@@ -118,12 +119,12 @@ public class admindashboard extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 909, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

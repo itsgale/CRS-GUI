@@ -85,28 +85,37 @@ public class login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Main.setBackground(new java.awt.Color(135, 91, 91));
+        Main.setBackground(new java.awt.Color(255, 255, 255));
         Main.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Main.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 3, 24)); // NOI18N
-        jLabel1.setText("Welcome to Barangay Document Request");
-        Main.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 470, 44));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Catering Reservation System");
+        Main.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 550, 44));
 
         username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameActionPerformed(evt);
             }
         });
-        Main.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, 240, 40));
+        Main.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 240, 40));
+
+        password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordActionPerformed(evt);
+            }
+        });
         Main.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 230, 240, 40));
 
         login.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
-        login.setText("login");
+        login.setText("Login");
         login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginActionPerformed(evt);
@@ -137,7 +146,15 @@ public class login extends javax.swing.JFrame {
         });
         Main.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 80, 20));
 
-        getContentPane().add(Main, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 430));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-codechef-100.png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 110, 150));
+
+        Main.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 520));
+
+        getContentPane().add(Main, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 520));
 
         pack();
         setLocationRelativeTo(null);
@@ -153,13 +170,13 @@ public class login extends javax.swing.JFrame {
             if(!status.equals("Active")){
             JOptionPane.showMessageDialog(null, "In-Active Account,\n Pls Contact admin!");                            
         }else{
-                if(type.equals("Administrator")){
-                    JOptionPane.showMessageDialog(null,"Login Successfull!");
+                if(type.equals("Admin")){
+                    JOptionPane.showMessageDialog(null,"Login Successful!");
                     admindashboard ads = new admindashboard();
                     ads.setVisible(true);
                     this.dispose();
                 }else if(type.equals("User")){
-                    JOptionPane.showMessageDialog(null,"Login Successfull!");
+                    JOptionPane.showMessageDialog(null,"Login Successful!");
                     userDashboard ud = new userDashboard();
                     ud.setVisible(true);
                     this.dispose();
@@ -189,6 +206,10 @@ public class login extends javax.swing.JFrame {
         rf.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,7 +252,9 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton login;
     private javax.swing.JPasswordField password;
     private javax.swing.JTextField username;

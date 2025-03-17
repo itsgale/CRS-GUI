@@ -66,31 +66,32 @@ public class usersForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(135, 91, 91));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setPreferredSize(new java.awt.Dimension(780, 520));
         jPanel1.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(109, 71, 52));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel2.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
-        jLabel2.setText("BACK");
+        jLabel2.setText("Back");
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel2MouseClicked(evt);
             }
         });
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(830, 10, 70, 40);
+        jLabel2.setBounds(710, 10, 70, 40);
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
-        jLabel3.setText("USERS FORM");
+        jLabel3.setText("Users Form");
         jPanel2.add(jLabel3);
         jLabel3.setBounds(10, 10, 270, 40);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 910, 60);
+        jPanel2.setBounds(0, 0, 780, 60);
 
         usersTable.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         usersTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -104,9 +105,9 @@ public class usersForm extends javax.swing.JFrame {
         jScrollPane1.setViewportView(usersTable);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(240, 70, 660, 340);
+        jScrollPane1.setBounds(240, 70, 540, 340);
 
-        jPanel3.setBackground(new java.awt.Color(112, 73, 73));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -124,7 +125,7 @@ public class usersForm extends javax.swing.JFrame {
         jPanel1.add(jPanel3);
         jPanel3.setBounds(20, 70, 90, 80);
 
-        update.setBackground(new java.awt.Color(112, 73, 73));
+        update.setBackground(new java.awt.Color(255, 255, 255));
         update.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         update.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -139,7 +140,7 @@ public class usersForm extends javax.swing.JFrame {
         jPanel1.add(update);
         update.setBounds(20, 170, 90, 80);
 
-        jPanel5.setBackground(new java.awt.Color(112, 73, 73));
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -150,27 +151,32 @@ public class usersForm extends javax.swing.JFrame {
         jPanel5.setBounds(20, 280, 90, 80);
 
         jLabel5.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        jLabel5.setText("ADD USERS");
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Add Users");
         jPanel1.add(jLabel5);
         jLabel5.setBounds(120, 70, 110, 80);
 
         jLabel7.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        jLabel7.setText("DELETE");
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Delete");
         jPanel1.add(jLabel7);
         jLabel7.setBounds(130, 280, 60, 40);
 
         jLabel9.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        jLabel9.setText(" USERS");
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Users");
         jPanel1.add(jLabel9);
         jLabel9.setBounds(130, 310, 70, 40);
 
         jLabel10.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        jLabel10.setText("UPDATE");
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Update");
         jPanel1.add(jLabel10);
         jLabel10.setBounds(130, 180, 70, 40);
 
         jLabel11.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        jLabel11.setText(" USERS");
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText(" Users");
         jPanel1.add(jLabel11);
         jLabel11.setBounds(130, 210, 70, 40);
 
@@ -178,11 +184,11 @@ public class usersForm extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 908, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

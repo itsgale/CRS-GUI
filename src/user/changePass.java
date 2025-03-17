@@ -41,6 +41,7 @@ public class changePass extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         conpass = new javax.swing.JPasswordField();
         oldpass = new javax.swing.JPasswordField();
         newpass = new javax.swing.JPasswordField();
@@ -57,40 +58,58 @@ public class changePass extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(135, 91, 91));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(780, 520));
         jPanel1.setLayout(null);
 
         jLabel5.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Confirm Password: ");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(20, 170, 180, 30);
+        jLabel5.setBounds(60, 260, 180, 30);
 
         jLabel6.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Enter Old Password: ");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(20, 70, 180, 30);
+        jLabel6.setBounds(60, 160, 180, 30);
 
         jLabel7.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Enter New Password: ");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(20, 120, 180, 30);
+        jLabel7.setBounds(60, 210, 180, 30);
 
-        jPanel2.setBackground(new java.awt.Color(109, 71, 52));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Change Password");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 496, Short.MAX_VALUE)
+            .addGap(0, 776, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 56, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 500, 60);
+        jPanel2.setBounds(0, 0, 780, 60);
 
         conpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,7 +117,7 @@ public class changePass extends javax.swing.JFrame {
             }
         });
         jPanel1.add(conpass);
-        conpass.setBounds(220, 170, 230, 30);
+        conpass.setBounds(260, 260, 230, 30);
 
         oldpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,7 +125,7 @@ public class changePass extends javax.swing.JFrame {
             }
         });
         jPanel1.add(oldpass);
-        oldpass.setBounds(220, 70, 230, 30);
+        oldpass.setBounds(260, 160, 230, 30);
 
         newpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,9 +133,9 @@ public class changePass extends javax.swing.JFrame {
             }
         });
         jPanel1.add(newpass);
-        newpass.setBounds(220, 120, 230, 30);
+        newpass.setBounds(260, 210, 230, 30);
 
-        save.setBackground(new java.awt.Color(109, 71, 52));
+        save.setBackground(new java.awt.Color(255, 255, 255));
         save.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         save.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -126,14 +145,14 @@ public class changePass extends javax.swing.JFrame {
         save.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        jLabel1.setText("SAVE");
+        jLabel1.setText("Save");
         save.add(jLabel1);
         jLabel1.setBounds(20, 10, 60, 20);
 
         jPanel1.add(save);
-        save.setBounds(360, 210, 90, 40);
+        save.setBounds(400, 320, 90, 40);
 
-        CANCEL.setBackground(new java.awt.Color(109, 71, 52));
+        CANCEL.setBackground(new java.awt.Color(255, 255, 255));
         CANCEL.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         CANCEL.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -143,27 +162,28 @@ public class changePass extends javax.swing.JFrame {
         CANCEL.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        jLabel2.setText("CANCEL");
+        jLabel2.setText("Cancel");
         CANCEL.add(jLabel2);
         jLabel2.setBounds(10, 10, 70, 20);
 
         jPanel1.add(CANCEL);
-        CANCEL.setBounds(220, 210, 90, 40);
+        CANCEL.setBounds(260, 320, 90, 40);
 
         acc_id.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
+        acc_id.setForeground(new java.awt.Color(255, 255, 255));
         acc_id.setText("(ID)");
         jPanel1.add(acc_id);
-        acc_id.setBounds(60, 220, 50, 30);
+        acc_id.setBounds(60, 330, 50, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -269,6 +289,7 @@ public class changePass extends javax.swing.JFrame {
     private javax.swing.JPasswordField conpass;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

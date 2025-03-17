@@ -84,10 +84,13 @@ public class RegistrationAD extends javax.swing.JFrame {
         as1 = new javax.swing.JComboBox<>();
         ut1 = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Main.setBackground(new java.awt.Color(135, 91, 91));
+        Main.setBackground(new java.awt.Color(255, 255, 255));
+        Main.setPreferredSize(new java.awt.Dimension(780, 520));
         Main.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
@@ -135,7 +138,7 @@ public class RegistrationAD extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Password: ");
-        Main.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, -1, -1));
+        Main.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, -1, -1));
 
         pass1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         pass1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -144,17 +147,17 @@ public class RegistrationAD extends javax.swing.JFrame {
                 pass1ActionPerformed(evt);
             }
         });
-        Main.add(pass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, 210, 30));
+        Main.add(pass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, 210, 30));
 
         jLabel9.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Account status:");
+        jLabel9.setText("Account Status:");
         Main.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Email:");
-        Main.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, -1, -1));
+        Main.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, -1, -1));
 
         email1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         email1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -163,10 +166,10 @@ public class RegistrationAD extends javax.swing.JFrame {
                 email1ActionPerformed(evt);
             }
         });
-        Main.add(email1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, 210, 30));
+        Main.add(email1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, 210, 30));
 
         cancel.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
-        cancel.setText("CANCEL");
+        cancel.setText("Cancel");
         cancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelActionPerformed(evt);
@@ -175,7 +178,7 @@ public class RegistrationAD extends javax.swing.JFrame {
         Main.add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 360, 90, 20));
 
         addButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
-        addButton.setText("ADD");
+        addButton.setText("Add");
         addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addButtonActionPerformed(evt);
@@ -189,11 +192,12 @@ public class RegistrationAD extends javax.swing.JFrame {
         Main.add(addButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 360, 90, 20));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
-        jLabel1.setText("Register your account");
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Register Your Account");
         jLabel1.setToolTipText("");
-        Main.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 250, 50));
+        Main.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 550, 50));
 
-        as1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pending", "Active", " " }));
+        as1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pending", "Active" }));
         as1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 as1ActionPerformed(evt);
@@ -201,7 +205,7 @@ public class RegistrationAD extends javax.swing.JFrame {
         });
         Main.add(as1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, 210, 30));
 
-        ut1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Administrator" }));
+        ut1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Admin" }));
         ut1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ut1ActionPerformed(evt);
@@ -211,19 +215,27 @@ public class RegistrationAD extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("Account type:");
+        jLabel10.setText("Account Type:");
         Main.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, -1, -1));
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-codechef-100.png"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 110, 150));
+
+        Main.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 520));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Main, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+            .addComponent(Main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(Main, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -366,9 +378,11 @@ if (fname.getText().isEmpty() ||
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     public javax.swing.JTextField ln1;
     public javax.swing.JPasswordField pass1;
     public javax.swing.JTextField username1;
