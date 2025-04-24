@@ -6,8 +6,12 @@
 package user;
 
 import config.Session;
+import config.dbConnector;
 import dbtestgui.login;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import net.proteanit.sql.DbUtils;
 
 /**
  *
@@ -20,8 +24,19 @@ public class userDashboard extends javax.swing.JFrame {
      */
     public userDashboard() {
         initComponents();
+        displayData();
     }
-
+   public void displayData() {
+        try {
+            dbConnector dbc = new dbConnector();
+            ResultSet rs = dbc.getData("SELECT u_id,u_fname,u_lname,u_type,u_status FROM tbl_user");
+            table.setModel(DbUtils.resultSetToTableModel(rs));
+            rs.close();
+        } catch (SQLException ex) {
+            System.out.println("Errors: " + ex.getMessage());
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -40,6 +55,8 @@ public class userDashboard extends javax.swing.JFrame {
         acc_name = new javax.swing.JLabel();
         acc_id = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        table = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -99,6 +116,22 @@ public class userDashboard extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(0, 440, 780, 80);
+
+        table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(table);
+
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(0, 80, 780, 360);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -188,5 +221,7 @@ public class userDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
 }
